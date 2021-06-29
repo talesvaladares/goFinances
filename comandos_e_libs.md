@@ -16,3 +16,4 @@
 16 - yarn add victory-native
 17 - yarn add react-native-svg
 18 - yarn add date-fns
+19 - yarn add react-native-svg-transformer -> https://www.npmjs.com/package/react-native-svg-transformer

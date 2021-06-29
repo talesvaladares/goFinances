@@ -17,10 +17,11 @@ import {
 } from '@expo-google-fonts/poppins';
 
 import {ThemeProvider} from 'styled-components';
-
+import {AuthProvider} from './src/contexts/AuthContext';
 
 import theme from './src/styles/theme';
-import {AppRoutes} from './routes/app.routes'
+import {AppRoutes} from './routes/app.routes';
+import {SignIn} from './src/pages/SignIn';
 
 export default function App() {
 
@@ -38,7 +39,9 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <NavigationContainer>
         <StatusBar barStyle="light-content" translucent backgroundColor="transparent"/>
-        <AppRoutes/>
+        <AuthProvider>
+          <SignIn/>
+        </AuthProvider>
       </NavigationContainer>
     </ThemeProvider>
   );
